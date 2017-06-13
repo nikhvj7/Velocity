@@ -6,7 +6,7 @@ class Database
     static $_instance;
 
     private function __construct() {
-        $this->_db = new PDO('mysql:host=localhost;dbname=timer', 'root', 'nobodyknows');
+        $this->_db = new PDO('mysql:host=localhost;dbname=timer', 'root', 'toor');
         $this->_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 

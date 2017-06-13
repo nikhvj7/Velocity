@@ -51,8 +51,8 @@ class Customers
 
 		$age     =trim($postParams['age']);
 		
-
-
+		$children = $postParams['child'];
+		
 		$this->_db->query("SELECT 1 FROM `customers` WHERE `no` = :no");
 		$this->_db->bind(':no', $phoneNumber); // use bindParam to bind the variable		
 		$this->_db->execute();
@@ -73,13 +73,33 @@ class Customers
 
 			$this->_db->execute();
 
-		
+			if($children != NULL){
+				
+				foreach ($children as $child) {
+					$sql = "INSERT INTO `customers`(`firstname`,`lastname`,`no`,`email`,`age`)  
+						VALUES(:field1,:field2,:field3,:field4,:field5);";
+
+
+					$this->_db->query($sql);
+
+					$this->_db->bind(':field1',$child['firstname']);
+					$this->_db->bind(':field2',$child['lastname']);
+					$this->_db->bind(':field3',$phoneNumber);
+					$this->_db->bind(':field4',$email);
+					$this->_db->bind(':field5',$child['age']);
+
+					$this->_db->execute();
+				}
+			}
+			
 
 			echo 'New Customer Added';
 		}
 		else{
 			echo 'Duplicate Customer!';
 		}
+
+
 	}
 
 	private function updateCustomer($postParams) {
