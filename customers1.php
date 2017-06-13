@@ -181,7 +181,7 @@ $time = date("Y-m-d H:i:s");
         var phoneNumber = "";
         var email="";
         var age="";
-  var child_count=1;
+        var child_count=1;
 
     $('body').delegate('#addButton', 'click', function() {
 
@@ -200,14 +200,12 @@ $time = date("Y-m-d H:i:s");
       $('#child_add').append('<div class="form_row"><div class="text_placeholder">Last Name</div><div class="form_inline input_placeholder"><input type="text" class = "child_last_name" value='+lastName+'></div></div>');
       $('#child_add').append('<div class="form_row"><div class="form_inline text_placeholder">Age</div><div class="form_inline input_placeholder"><input type="text" class = "child_age"</div></div>');*/
 
-      $('#child_add').append('<div class="form_row"><div class="form_inline">Child ' +child_count+'<div class="input_placeholder form_inline" style="margin-left:20px"><input type="text" class="child_first_name" placeholder="Firstname"><span class="bar"></span></div><div class="input_placeholder form_inline" style="margin-left:10px"><input type="text" class="child_last_name" placeholder="Lastname" value="'+lastName+'"><span class="bar"></span></div>  <div class="input_placeholder form_inline" style="margin-left:10px"><input type="text" class="child_age" placeholder="Age" style="width:100px"><span class="bar" style="width:115px"></span></div> </div></div>');
-   child_count++;
-      // $('#child_add').append('');
-      // $('#child_add').append('<div class="form_row"><div class="text_placeholder">Last Name</div><div class="form_inline input_placeholder"><input type="text" class = "child_last_name" value='+lastName+'></div></div>');
-      // $('#child_add').append('<div class="form_row"><div class="form_inline text_placeholder">Age</div><div class="form_inline input_placeholder"><input type="text" class = "child_age"</div></div>');
+      $('#child_add').append('<div class="form_row" style="margin-bottom:5px"><div class="form_inline">Child ' +child_count+'<div class="input_placeholder form_inline" style="margin-left:20px"><input type="text" class="child_first_name" placeholder="Firstname"><span class="bar"></span></div><div class="input_placeholder form_inline" style="margin-left:10px"><input type="text" class="child_last_name" placeholder="Lastname" value="'+lastName+'"><span class="bar"></span></div>  <div class="input_placeholder form_inline" style="margin-left:10px"><input type="text" class="child_age" placeholder="Age" style="width:100px"><span class="bar" style="width:115px"></span></div><div class="form_inline" id="cross"></div></div></div>');
+      child_count++;
+      console.log(child_count);
     });
 
-
+    
 
     $('body').delegate('#addcustnext', 'click', function() {
         firstName = $('#first_name').val();
@@ -384,6 +382,19 @@ $time = date("Y-m-d H:i:s");
       box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.6);
     }
     #addButton:active{background-color: #138e5d;}
+
+    #cross{
+      background:url('css/icons/ic2_cancel.png') no-repeat center center;
+      margin-left:40px;
+      vertical-align: top;
+      margin-top: 17px;
+      height: 20px;
+      width: 20px;
+    }
+
+    #cross:active{
+      background-color:rgb(230,230,230); 
+    }
 
     .radial_anim{
       width: 48px;
