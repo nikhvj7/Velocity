@@ -1,0 +1,50 @@
+/*companies*/
+#company_bar{
+	position: fixed;
+	height: 48px;background-color: white;top: 64px;
+	z-index: 2;
+	width: 100%;
+	border-bottom: 1px solid rgb(200,200,200);
+}
+.company_bar_company:first-child{margin-left: 48px;}
+.company_bar_company{
+	display: inline-block;
+	color: rgb(100,100,100);
+	margin-left: 12px;
+	margin-right: 12px;
+	/*background-color: green;*/
+	height: 45px;line-height: 45px;
+	border-bottom: 3px solid transparent;
+}
+
+/*exception search for employees*/
+.company_bar_search{
+	float: right;	
+	display: inline-block;
+	color: rgb(100,100,100);
+	margin-left: 12px;
+	margin-right: 48px;
+	/*background-color: green;*/	
+}
+
+.company_bar_search input{
+	font-family: 'Roboto', sans-serif;
+	padding-left: 12px;	
+	margin-top: 12px;
+	width: 250px;
+	height: 20px;
+}
+
+.company_bar_company_active{border-bottom: 3px solid #3178CE;}
+.company_bar_company:hover{	border-bottom: 3px solid #3178CE;cursor: pointer;}
+
+@media only screen and (min-width: 1200px)and (max-width: 1366px) {
+
+	#company_bar,#cntrl_bar{width: calc(100% - 224px);margin-left: 224px;}
+}
+
+
+@media only screen and (min-width: 1367px) {
+	#company_bar,#cntrl_bar{width: calc(100% - 224px);margin-left: 224px;}
+}
+
