@@ -5,7 +5,7 @@
 		$lastName = $_GET['lastName'];
 		$phoneNumber = $_GET['phoneNumber'];
 		$age=$_GET['age'];
-		$email=$_GET['email'];
+		//$email=$_GET['email'];
 	}
 ?>
 <body>
@@ -24,7 +24,11 @@
 				</div>
 
 				<div class="form_row">
-					<div class="form_inline text_placeholder">Last Name</div>
+					<div class="form_inline text_placeholder">LastadfdffName</div>
+					<div class="form_inline input_placeholder"><input type="text" class = "cust_name" id="last_name" value = <?php echo $lastName?>><span class="bar"></span></div>
+				</div>
+<div class="form_row">
+					<div class="form_inline text_placeholder">LastadfdffssName</div>
 					<div class="form_inline input_placeholder"><input type="text" class = "cust_name" id="last_name" value = <?php echo $lastName?>><span class="bar"></span></div>
 				</div>
 
